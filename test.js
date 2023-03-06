@@ -20,6 +20,7 @@ const DEFAULT_ITEM_ATUALIZAR = {
 describe('Suite de manipulação de Campões', () => {
     before(async () => {
         await database.cadastrar(DEFAULT_ITEM_CADASTRAR);
+        await database.cadastrar(DEFAULT_ITEM_ATUALIZAR);
     })
     it('Deve pesquisar um campeao usando arquivos', async () => {
         const expected = DEFAULT_ITEM_CADASTRAR;
@@ -48,7 +49,7 @@ describe('Suite de manipulação de Campões', () => {
             funcao: 'DPS/Control'
         }
          await database.atualizar(DEFAULT_ITEM_ATUALIZAR.id, novoDado);
-         const resultado = database.listar(DEFAULT_ITEM_ATUALIZAR);
+         const [resultado] = await database.listar(DEFAULT_ITEM_ATUALIZAR.id);
         deepEqual(resultado, expected);
     })
 })
