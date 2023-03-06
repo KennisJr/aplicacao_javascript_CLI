@@ -29,8 +29,8 @@ class Database {
         const dados = await this.obterDadosArquivo();
         const id = campeao.id <= 2 ? campeao.id : Date.now();
         const campeaoComId = {
+            ...campeao,
             id,
-            ...campeao
         }
         
         const dadoFinal = [
