@@ -1,5 +1,5 @@
 {
-  "name": "aula_cli",
+  "name": "projeto_cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Edson Kennis",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^10.2.0"
