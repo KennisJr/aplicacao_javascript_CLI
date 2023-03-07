@@ -30,7 +30,7 @@ async function main () {
            console.log(resultado);
            return;
         }
-        if(options.remover){
+        if(options.deletar){
             const resultado = await Database.remover(campeao.id);
             if(!resultado){
                 console.log('Erro ao remover o campeão');
